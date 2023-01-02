@@ -2,7 +2,7 @@
 {
     'name': 'Hospital Managment System',
     'version': '14.0.2.1.0',
-    'summary': 'Hospital Managment System',
+    'summary': 'Hospital Managment System for odoo 14',
     'sequence': -100,
     'description': """Hospital Managment System""",
     'category': 'Services',
