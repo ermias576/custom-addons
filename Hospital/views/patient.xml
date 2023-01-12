@@ -9,12 +9,12 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="name">
-                            <field name="age"> 
+                            <field name="name" />
+                            <field name="age" />
                         </group>
                         <group>
-                            <field name="gender">  
-                            <field name="note">  
+                            <field name="gender" />
+                            <field name="note" />
                         </group>
                     </group>
                 </sheet>
@@ -22,7 +22,20 @@
         </field>
     </record>
 
-                <record id="patient_action" model="ir.actions.act_window">
+    <record id="patient_tree" model="ir.ui.view">
+        <field name="name">hospital.patient.tree</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="age" />
+                <field name="gender" />
+                <field name="note" />
+            </tree>
+        </field>    
+    </record>
+
+    <record id="patient_action" model="ir.actions.act_window">
                     <field name="name">Patients</field>
                     <field name="type">ir.actions.act_window</field>
                     <field name="res_model">hospital.patient</field>
@@ -32,25 +45,25 @@
                         create your first Patient!
                     </p>
                     </field>   
-                </record>
+    </record>
 
 
-                <menuitem
-                    id="hospital_root"
-                    name="RD Hospital"
-                    sequence="10"/>
+    <menuitem
+        id="hospital_root"
+        name="RD Hospital"
+        sequence="10"/>
 
-                <menuitem
-                    id="hospital_patient_root"
-                    name="Patients"
-                    parent="hospital_root"
-                    sequence="10"/>
-                <menuitem
-                    id="hospital_patient"
-                    name="Patients"
-                    parent="hospital_patient_root"
-                    action="patient_action"
-                    sequence="10"/>        
+    <menuitem
+        id="hospital_patient_root"
+        name="Patients"
+        parent="hospital_root"
+        sequence="10"/>
+    <menuitem
+        id="hospital_patient"
+        name="Patients"
+        parent="hospital_patient_root"
+        action="patient_action"
+        sequence="10"/>        
 
 
 </odoo>
