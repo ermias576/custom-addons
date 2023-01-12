@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="patient_action" model="model_name">
+        <field name="field_name">field_value</field>
+    </record>
+
+
+    <menuitem
+        id="hospital_root"
+        name="RD Hospital"
+        sequence="10"/>
+
+    <menuitem
+        id="hospital_patient_root"
+        name="Patients"
+        parent="hospital_root"
+        sequence="10"/>
+    <menuitem
+        id="hospital_patient"
+        name="Patients"
+        parent="hospital_patient_root"
+        sequence="10"/>        
+
+
+</odoo>

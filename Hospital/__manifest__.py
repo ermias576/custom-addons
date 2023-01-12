@@ -11,7 +11,9 @@
     'website': 'https://www.randdethiopia.com',
     'license': 'AGPL-3',
     'depends': [],
-    'data': [],
+    'data': [
+        'views/patient.xml'
+    ],
     'demo': [],
     'qweb': [],
     'images': ['static/description/banner.gif'],
