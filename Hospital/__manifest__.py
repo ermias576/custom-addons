@@ -10,7 +10,7 @@
     'maintainer': 'Ermias Tegegn',
     'website': 'https://www.randdethiopia.com',
     'license': 'AGPL-3',
-    'depends': [],
+    'depends': ['sale'],
     'data': [
         'security/ir.model.access.csv',
         'views/patient.xml'
