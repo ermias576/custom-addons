@@ -43,8 +43,12 @@
               <field name="name" />
               <field name="note" />
               <separator />
+              <filter name="male" string="Male" domain="[('gender', '=', 'male')]" />
+              <filter name="female" string="Female" domain="[('gender', '=', 'female')]" />
+              <filter name="other" string="Others" domain="[('gender', '=', 'other')]" />
               <group expand="1" string="Group By">
                  <filter name="gender" string="Gender" context="{'group_by': 'gender'}" />
+                 <filter name="patient_name" string="Patient Name" context="{'group_by': 'name'}" />
               </group>
             </search>
         </field>

@@ -9,7 +9,7 @@ class HospitalPatient(models.Model):
     age = fields.Integer(string='Age')
     gender = fields.Selection([
         ('male', 'Male'),
-        ('male', 'Male'),
+        ('female', 'Female'),
         ('other', 'other')
     ], required=True, default = 'male')
 
