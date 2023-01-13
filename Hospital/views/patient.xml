@@ -39,10 +39,14 @@
         <field name="name">hospital.patient.search</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
-           <search string="Patients">
+            <search string="Patients">
               <field name="name" />
               <field name="note" />
-           </search>
+              <separator />
+              <group expand="1" string="Group By">
+                 <filter name="gender" string="Gender" context="{'group_by': 'gender'}" />
+              </group>
+            </search>
         </field>
     </record>
 
