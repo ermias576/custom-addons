@@ -42,6 +42,9 @@
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                   <field name="state" widget="statusbar" options="{'clickable': '1'}" statusbar_visible="draft,done,confirm" />
+                </header>
                 <sheet>
                     <group>
                         <group>
@@ -72,6 +75,7 @@
                 <field name="age" />
                 <field name="gender" />
                 <field name="note" />
+                <field name="state" />
             </tree>
         </field>    
     </record>
