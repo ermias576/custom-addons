@@ -43,7 +43,8 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                   <field name="state" widget="statusbar" options="{'clickable': '1'}" statusbar_visible="draft,done,confirm" />
+                   <field name="state" widget="statusbar" options="{'clickable': '1'}" 
+                          statusbar_visible="draft,done,confirm" />
                 </header>
                 <sheet>
                     <group>
