@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_hr_payslip_inherit_form">
+        <field name="name">hr.recuritment.inherit.form</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']" position="after">
+                <label for="closed_date"/>
+                <field name="closed_date"  />
+            </xpath>
+        </field>
+    </record>
+ </odoo>
