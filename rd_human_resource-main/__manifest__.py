@@ -7,7 +7,7 @@
     'summary': 'Customization on the Employer and Employee Information',
     'sequence': 11,
     'website': 'https://randdethiopia.com/',
-    'depends': ['crm','base_address_city','base','hr'],
+    'depends': ['base_address_city','base','hr'],
     'license': 'LGPL-3',
     'data': [
        'views/Employee_address.xml'

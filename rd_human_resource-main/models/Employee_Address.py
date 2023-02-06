@@ -20,12 +20,13 @@ class InheritedEmployee(models.Model):
          ('akaky', 'Akaky Kaliti'),
          ('arada', 'Arada'),
          ('bole', 'Bole'),
-         ('gullel', 'Gullel'),
+         ('gullele', 'Gullele'),
          ('kirkos', 'Kirkos'),
          ('lideta', 'Lideta'),
          ('kolfe', 'Kolfe Keranio'),
          ('yeka', 'Yeka'),
-         ('nifas_silk', 'Nifas Silk-Lafto')],
+         ('nifas_silk', 'Nifas Silk-Lafto'),
+         ('lemi_kura', 'Lemi Kura')],
         default='bole')
     woreda = fields.Char()
 
@@ -33,14 +34,19 @@ class InheritedEmployee(models.Model):
     house_no = fields.Char()
     phone_number = fields.Char()
     bank_name = fields.Selection([
+        ('abyssinia', 'Bank of Abyssinia'),
         ('cbe', 'Commercial Bank of Ethiopia'),
+        ('nib', 'Nib International Bank'),
+        ('abay', 'Abay Bank'),
+        ('addis', 'Addis International Bank'),
         ('awash', 'Awash International Bank'),
-        ('dash', 'Dashen Bank'),
-        ('abay', 'Abay Bank S.C'),
-        ('abb', 'Bank of Abyssinia'),
-        ('bh', 'Hibret Bank'),
-        ('nib', 'Nib International Bank')],
-        default='abb')
+        ('Berhan', 'Berhan International Bank'),
+        ('bunna', 'Bunna International Bank'),
+        ('oromia', 'Cooperative Bank of Oromia'),
+        ('dashen', 'Dashen Bank'),
+        ('debub', 'Debub Global Bank'),
+        ('enat', 'Enat Bank')],
+        default='abyssinia')
     bank_account_number = fields.Char()
 
 class SubcityCityName(models.Model):
@@ -51,12 +57,13 @@ class SubcityCityName(models.Model):
          ('akaky', 'Akaky Kaliti'),
          ('arada', 'Arada'),
          ('bole', 'Bole'),
-         ('gullel', 'Gullel'),
+         ('gullel', 'Gullele'),
          ('kirkos', 'Kirkos'),
          ('lideta', 'Lideta'),
          ('kolfe', 'Kolfe Keranio'),
          ('yeka', 'Yeka'),
-         ('nifas_silk', 'Nifas Silk-Lafto')],
+         ('nifas_silk', 'Nifas Silk-Lafto'),
+         ('lemi_kura', 'Lemi Kura')],
         default='bole')
     woreda1 = fields.Char()
     kebele1 = fields.Char()
