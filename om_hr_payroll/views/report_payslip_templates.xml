@@ -18,7 +18,7 @@
                                     <span t-field="o.employee_id"/>
                                 </td>
                                 <td>
-                                    <strong>Designation</strong>
+                                    <strong>Position</strong>
                                 </td>
                                 <td>
                                     <span t-field="o.employee_id.job_id"/>
@@ -28,9 +28,15 @@
                                 <td>
                                     <strong>Address</strong>
                                 </td>
-                                <td colspan="3">
+                                <td>
                                     <div t-field="o.employee_id.address_home_id"
                                          t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                </td>
+                                <td>
+                                    <strong>Pension ID</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.employee_id.pension_id"/>
                                 </td>
                             </tr>
                             <tr>
@@ -41,10 +47,10 @@
                                     <span t-field="o.employee_id.work_email"/>
                                 </td>
                                 <td>
-                                    <strong>Identification No</strong>
+                                    <strong>TIN No</strong>
                                 </td>
                                 <td>
-                                    <span t-field="o.employee_id.identification_id"/>
+                                    <span t-field="o.employee_id.tax_id"/>
                                 </td>
                             </tr>
                             <tr>
@@ -58,7 +64,8 @@
                                     <strong>Bank Account</strong>
                                 </td>
                                 <td>
-                                    <span t-field="o.employee_id.bank_account_id"/>
+                                    <span t-field="o.employee_id.bank_name"/> ||
+                                    <span t-field="o.employee_id.bank_account_number"/>
                                 </td>
                             </tr>
                             <tr>
@@ -80,7 +87,6 @@
                         <table class="table table-sm">
                             <thead>
                                 <tr>
-                                    <th>Code</th>
                                     <th>Name</th>
                                     <th>Quantity/rate</th>
                                     <th>Amount</th>
@@ -89,9 +95,6 @@
                             </thead>
                             <tbody>
                                 <tr t-foreach="o.line_ids.filtered(lambda line: line.appears_on_payslip)" t-as="line">
-                                    <td>
-                                        <span t-field="line.code"/>
-                                    </td>
                                     <td>
                                         <span t-field="line.name"/>
                                     </td>
